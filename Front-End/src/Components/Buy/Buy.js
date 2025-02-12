@@ -30,15 +30,18 @@ const Buy = () => {
   }, []);
   const totalpricefunc = async () => {
     const userid = JSON.parse(localStorage.getItem("user"))._id;
-    let result = await fetch(`http://localhost:13000/totalprice`, {
-      method: "post",
-      body: JSON.stringify({
-        userid,
-      }),
-      headers: {
-        "content-Type": "application/json",
-      },
-    });
+    let result = await fetch(
+      `https://fullstack-ecommerce-project-u1cr.onrender.com/totalprice`,
+      {
+        method: "post",
+        body: JSON.stringify({
+          userid,
+        }),
+        headers: {
+          "content-Type": "application/json",
+        },
+      }
+    );
     result = await result.json();
     result = await result.totalprice;
     settotalprice(result);
@@ -47,13 +50,16 @@ const Buy = () => {
     const userid = JSON.parse(localStorage.getItem("user"))._id;
     console.log(userid);
     console.log("get address running");
-    let result = await fetch(`http://localhost:13000/getaddress`, {
-      method: "post",
-      body: JSON.stringify({ userid }),
-      headers: {
-        "content-Type": "application/json",
-      },
-    });
+    let result = await fetch(
+      `https://fullstack-ecommerce-project-u1cr.onrender.com/getaddress`,
+      {
+        method: "post",
+        body: JSON.stringify({ userid }),
+        headers: {
+          "content-Type": "application/json",
+        },
+      }
+    );
     const responseData = await result.json();
     if (responseData.street && responseData.city && responseData.zipcode) {
       console.log(responseData);
@@ -104,13 +110,16 @@ const Buy = () => {
     }
     if (isValid) {
       const userid = JSON.parse(localStorage.getItem("user"))._id;
-      let result = await fetch(`http://localhost:13000/updateaddress`, {
-        method: "post",
-        body: JSON.stringify({ userid, street, city, zipcode, country }),
-        headers: {
-          "content-Type": "application/json",
-        },
-      });
+      let result = await fetch(
+        `https://fullstack-ecommerce-project-u1cr.onrender.com/updateaddress`,
+        {
+          method: "post",
+          body: JSON.stringify({ userid, street, city, zipcode, country }),
+          headers: {
+            "content-Type": "application/json",
+          },
+        }
+      );
       const responseData = await result.json();
       console.log(responseData);
       console.log(responseData.street);
