@@ -44,13 +44,16 @@ const Profile = () => {
       isValid = false;
     }
     if (isValid) {
-      let result = await fetch(`http://localhost:13000/signup`, {
-        method: "post",
-        body: JSON.stringify({ name, email, password }),
-        headers: {
-          "content-Type": "application/json",
-        },
-      });
+      let result = await fetch(
+        `https://fullstack-ecommerce-project-u1cr.onrender.com/signup`,
+        {
+          method: "post",
+          body: JSON.stringify({ name, email, password }),
+          headers: {
+            "content-Type": "application/json",
+          },
+        }
+      );
       const responseData = await result.json();
       if (responseData.email === "Email is already in use") {
         emailseterror("email is already in use");
@@ -94,13 +97,16 @@ const Profile = () => {
       console.log(name);
       console.log(email);
       console.log(password);
-      let result = await fetch(`http://localhost:13000/login`, {
-        method: "post",
-        body: JSON.stringify({ name, email, password }),
-        headers: {
-          "content-Type": "application/json",
-        },
-      });
+      let result = await fetch(
+        `https://fullstack-ecommerce-project-u1cr.onrender.com/login`,
+        {
+          method: "post",
+          body: JSON.stringify({ name, email, password }),
+          headers: {
+            "content-Type": "application/json",
+          },
+        }
+      );
       let resultdata11 = await result.json();
       console.log(resultdata11);
       if (resultdata11.errordata === "No User Found") {

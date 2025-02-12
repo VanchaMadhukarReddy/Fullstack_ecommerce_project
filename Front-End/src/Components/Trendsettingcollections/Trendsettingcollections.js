@@ -11,7 +11,9 @@ const Trendsettingcollections = () => {
     getProducts();
   }, []);
   const getProducts = async () => {
-    let result = await fetch(`http://localhost:13000/jk`);
+    let result = await fetch(
+      `https://fullstack-ecommerce-project-u1cr.onrender.com/jk`
+    );
     console.log(result);
     result = await result.json();
 

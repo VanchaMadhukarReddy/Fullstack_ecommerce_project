@@ -43,16 +43,19 @@ const Product = () => {
   const findfav = async () => {
     const userid = JSON.parse(localStorage.getItem("user"))._id;
     let pid = productid;
-    let result = await fetch("http://localhost:13000/favget", {
-      method: "post",
-      body: JSON.stringify({
-        pid,
-        userid,
-      }),
-      headers: {
-        "content-Type": "application/json",
-      },
-    });
+    let result = await fetch(
+      "https://fullstack-ecommerce-project-u1cr.onrender.com/favget",
+      {
+        method: "post",
+        body: JSON.stringify({
+          pid,
+          userid,
+        }),
+        headers: {
+          "content-Type": "application/json",
+        },
+      }
+    );
     result = await result.json();
     console.warn(result);
     if (result.pid) {
@@ -94,19 +97,22 @@ const Product = () => {
       setError("");
       setButtonText("Product Added to Cart");
       const userid = JSON.parse(localStorage.getItem("user"))._id;
-      let result = await fetch("http://localhost:13000/addtocart", {
-        method: "post",
-        body: JSON.stringify({
-          pid,
-          userid,
-          size,
-          price,
-          qty,
-        }),
-        headers: {
-          "content-Type": "application/json",
-        },
-      });
+      let result = await fetch(
+        "https://fullstack-ecommerce-project-u1cr.onrender.com/addtocart",
+        {
+          method: "post",
+          body: JSON.stringify({
+            pid,
+            userid,
+            size,
+            price,
+            qty,
+          }),
+          headers: {
+            "content-Type": "application/json",
+          },
+        }
+      );
       result = await result.json();
       console.warn(result);
       setTimeout(() => {
@@ -120,17 +126,20 @@ const Product = () => {
     const userid = JSON.parse(localStorage.getItem("user"))._id;
     let pid = productid;
     let price = productDetails.price;
-    let result = await fetch("http://localhost:13000/favproductoperations", {
-      method: "post",
-      body: JSON.stringify({
-        pid,
-        userid,
-        price,
-      }),
-      headers: {
-        "content-Type": "application/json",
-      },
-    });
+    let result = await fetch(
+      "https://fullstack-ecommerce-project-u1cr.onrender.com/favproductoperations",
+      {
+        method: "post",
+        body: JSON.stringify({
+          pid,
+          userid,
+          price,
+        }),
+        headers: {
+          "content-Type": "application/json",
+        },
+      }
+    );
     result = await result.json();
     console.warn(result);
     setIsFavorited(!isFavorited);

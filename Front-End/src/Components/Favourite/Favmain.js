@@ -16,15 +16,18 @@ const Favmain = () => {
   const Cartfunction = async () => {
     setLoading(true);
     const userid = JSON.parse(localStorage.getItem("user"))._id;
-    let result = await fetch(`http://localhost:13000/favitems`, {
-      method: "post",
-      body: JSON.stringify({
-        userid,
-      }),
-      headers: {
-        "content-Type": "application/json",
-      },
-    });
+    let result = await fetch(
+      `https://fullstack-ecommerce-project-u1cr.onrender.com/favitems`,
+      {
+        method: "post",
+        body: JSON.stringify({
+          userid,
+        }),
+        headers: {
+          "content-Type": "application/json",
+        },
+      }
+    );
     console.log(userid);
     console.log("fetching data......");
     result = await result.json();
@@ -41,19 +44,22 @@ const Favmain = () => {
   const addtocartitem = async (pid, size, price) => {
     const userid = JSON.parse(localStorage.getItem("user"))._id;
     let qty = 1;
-    let result = await fetch("http://localhost:13000/addtocart", {
-      method: "post",
-      body: JSON.stringify({
-        pid,
-        userid,
-        size,
-        price,
-        qty,
-      }),
-      headers: {
-        "content-Type": "application/json",
-      },
-    });
+    let result = await fetch(
+      "https://fullstack-ecommerce-project-u1cr.onrender.com/addtocart",
+      {
+        method: "post",
+        body: JSON.stringify({
+          pid,
+          userid,
+          size,
+          price,
+          qty,
+        }),
+        headers: {
+          "content-Type": "application/json",
+        },
+      }
+    );
     result = await result.json();
     console.warn(result);
     updateCart();
@@ -62,16 +68,19 @@ const Favmain = () => {
   // Delete item
   const deleteItem = async (pid) => {
     const userid = JSON.parse(localStorage.getItem("user"))._id;
-    let result = await fetch(`http://localhost:13000/favdelete`, {
-      method: "post",
-      body: JSON.stringify({
-        userid,
-        pid,
-      }),
-      headers: {
-        "content-Type": "application/json",
-      },
-    });
+    let result = await fetch(
+      `https://fullstack-ecommerce-project-u1cr.onrender.com/favdelete`,
+      {
+        method: "post",
+        body: JSON.stringify({
+          userid,
+          pid,
+        }),
+        headers: {
+          "content-Type": "application/json",
+        },
+      }
+    );
     updateCart();
   };
 

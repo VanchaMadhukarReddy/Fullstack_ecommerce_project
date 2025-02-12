@@ -14,14 +14,18 @@ const Search = () => {
 
   const getProducts = async () => {
     if (query) {
-      let result = await fetch(`http://localhost:13000/search/${query}`);
+      let result = await fetch(
+        `https://fullstack-ecommerce-project-u1cr.onrender.com/search/${query}`
+      );
       console.log(result);
       result = await result.json();
       console.log(result);
       setproducts(result);
       console.log(query);
     } else {
-      let result = await fetch(`http://localhost:13000/search`);
+      let result = await fetch(
+        `https://fullstack-ecommerce-project-u1cr.onrender.com/search`
+      );
       //   console.log(result);
       result = await result.json();
       console.log(result);

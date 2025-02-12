@@ -16,15 +16,18 @@ const Cart = () => {
   const Cartfunction = async () => {
     setLoading(true);
     const userid = JSON.parse(localStorage.getItem("user"))._id;
-    let result = await fetch(`http://localhost:13000/cartitems`, {
-      method: "post",
-      body: JSON.stringify({
-        userid,
-      }),
-      headers: {
-        "content-Type": "application/json",
-      },
-    });
+    let result = await fetch(
+      `https://fullstack-ecommerce-project-u1cr.onrender.com/cartitems`,
+      {
+        method: "post",
+        body: JSON.stringify({
+          userid,
+        }),
+        headers: {
+          "content-Type": "application/json",
+        },
+      }
+    );
     console.log(userid);
     console.log("fetching data......");
     result = await result.json();
@@ -43,17 +46,20 @@ const Cart = () => {
   //increase quantity
   const increaseQty = async (pid, size) => {
     const userid = JSON.parse(localStorage.getItem("user"))._id;
-    let result = await fetch(`http://localhost:13000/cart/increase`, {
-      method: "put",
-      body: JSON.stringify({
-        userid,
-        pid,
-        size,
-      }),
-      headers: {
-        "content-Type": "application/json",
-      },
-    });
+    let result = await fetch(
+      `https://fullstack-ecommerce-project-u1cr.onrender.com/cart/increase`,
+      {
+        method: "put",
+        body: JSON.stringify({
+          userid,
+          pid,
+          size,
+        }),
+        headers: {
+          "content-Type": "application/json",
+        },
+      }
+    );
     updateCart();
     totalpricefunc();
   };
@@ -64,17 +70,20 @@ const Cart = () => {
     console.log("decrease---------");
     if (qty > 1) {
       const userid = JSON.parse(localStorage.getItem("user"))._id;
-      let result = await fetch(`http://localhost:13000/cart/decrease`, {
-        method: "put",
-        body: JSON.stringify({
-          userid,
-          pid,
-          size,
-        }),
-        headers: {
-          "content-Type": "application/json",
-        },
-      });
+      let result = await fetch(
+        `https://fullstack-ecommerce-project-u1cr.onrender.com/cart/decrease`,
+        {
+          method: "put",
+          body: JSON.stringify({
+            userid,
+            pid,
+            size,
+          }),
+          headers: {
+            "content-Type": "application/json",
+          },
+        }
+      );
       updateCart();
       totalpricefunc();
     }
@@ -83,30 +92,36 @@ const Cart = () => {
   // Delete item
   const deleteItem = async (pid, size) => {
     const userid = JSON.parse(localStorage.getItem("user"))._id;
-    let result = await fetch(`http://localhost:13000/cart/delete`, {
-      method: "post",
-      body: JSON.stringify({
-        userid,
-        pid,
-        size,
-      }),
-      headers: {
-        "content-Type": "application/json",
-      },
-    });
+    let result = await fetch(
+      `https://fullstack-ecommerce-project-u1cr.onrender.com/cart/delete`,
+      {
+        method: "post",
+        body: JSON.stringify({
+          userid,
+          pid,
+          size,
+        }),
+        headers: {
+          "content-Type": "application/json",
+        },
+      }
+    );
     updateCart();
   };
   const totalpricefunc = async () => {
     const userid = JSON.parse(localStorage.getItem("user"))._id;
-    let result = await fetch(`http://localhost:13000/totalprice`, {
-      method: "post",
-      body: JSON.stringify({
-        userid,
-      }),
-      headers: {
-        "content-Type": "application/json",
-      },
-    });
+    let result = await fetch(
+      `https://fullstack-ecommerce-project-u1cr.onrender.com/totalprice`,
+      {
+        method: "post",
+        body: JSON.stringify({
+          userid,
+        }),
+        headers: {
+          "content-Type": "application/json",
+        },
+      }
+    );
     result = await result.json();
     result = await result.totalprice;
     settotalprice(result);

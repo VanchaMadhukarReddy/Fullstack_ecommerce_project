@@ -10,7 +10,9 @@ const Men = () => {
     getProducts();
   }, []);
   const getProducts = async () => {
-    let result = await fetch(`http://localhost:13000/mens`);
+    let result = await fetch(
+      `https://fullstack-ecommerce-project-u1cr.onrender.com/mens`
+    );
     console.log(result);
     result = await result.json();
 

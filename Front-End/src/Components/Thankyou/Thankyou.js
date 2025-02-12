@@ -6,15 +6,18 @@ const Thankyou = () => {
   }, []);
   const deleteItem = async () => {
     const userid = JSON.parse(localStorage.getItem("user"))._id;
-    let result = await fetch(`http://localhost:13000/buydelete`, {
-      method: "post",
-      body: JSON.stringify({
-        userid,
-      }),
-      headers: {
-        "content-Type": "application/json",
-      },
-    });
+    let result = await fetch(
+      `https://fullstack-ecommerce-project-u1cr.onrender.com/buydelete`,
+      {
+        method: "post",
+        body: JSON.stringify({
+          userid,
+        }),
+        headers: {
+          "content-Type": "application/json",
+        },
+      }
+    );
     console.log(result);
   };
   return (
