@@ -1,0 +1,184 @@
+/* 
+<div>
+      <Navbar />
+      <div className="logout">
+        <div className="profile1">
+          <div className="heading">
+            <h1>My Profile</h1>
+          </div>
+          <div className="portion2">
+            <div className="profimg">
+              <img src={profileimage} alt="hii" />
+            </div>
+            <div className="info111">
+              <div className="box1234">
+                <label>NAME</label>
+                <h3>
+                  <span>Madhukar Reddy</span>
+                </h3>
+              </div>
+              <div className="box1234">
+                <label>Email</label>
+                <h3>
+                  <span>bantireddy581@gmail.com</span>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div className="box1" style={{ margin: "0px", padding: "0px" }}>
+            <button className="btn11" onClick={logout}>
+              Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> */
+.logout {
+  display: flex;
+  margin: 0px;
+  box-sizing: border-box;
+  height: 85vh;
+  /* margin: 11vh 0px 0vh 0px; */
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  /* background-color: green; */
+  /* background: linear-gradient(169deg, orange, #ffffff 80%); */
+  background: linear-gradient(164deg, #ffdab9, #ffffff 80%);
+  /* justify-content: center; */
+}
+.profimg {
+  width: 50%;
+  border-radius: 5vw;
+  /* background-color: red; */
+}
+.profimg img {
+  width: 80%;
+  /* height: 0.3vh; */
+  /* background-color: red; */
+  border-radius: 80px;
+  box-shadow: 0px 5px 10px 10px rgba(227, 137, 12, 0.575);
+}
+.profile1 {
+  height: 65vh;
+  width: 30vw;
+  margin-top: 16vh;
+  /* margin-bottom: 6vh; */
+  box-shadow: 0px 20px 20px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* background-color: red; */
+  border-radius: 30px;
+  align-items: center;
+  min-width: 550px;
+  min-height: fit-content;
+}
+.portion2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70%;
+  align-items: center;
+  /* background-color: green; */
+}
+.heading {
+  /* background-color: gray; */
+}
+.profile1 h1 {
+  margin: 0px;
+  font-weight: bolder;
+  font-style: italic;
+}
+.info111 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+  align-content: center;
+  justify-content: center;
+  gap: 3vh;
+  overflow: hidden;
+}
+.info111 h3 {
+  margin: 0px;
+  padding: 0px;
+}
+.box1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 10%;
+}
+.btn11 {
+  width: 10vw;
+  height: 5vh;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  outline: none;
+  /* background-color: rgba(222, 70, 16, 0.658); */
+  background-color: rgb(255, 96, 5);
+  cursor: pointer;
+  min-width: 130px;
+  min-height: fit-content;
+}
+@media only screen and (max-width: 850px) {
+  .logout {
+    height: 100vh;
+  }
+  .profile1 {
+    margin-top: 19vh;
+    width: 70vw;
+    margin-bottom: 2vh;
+    min-width: 300px;
+  }
+
+  .btn11 {
+    width: 20vw;
+    height: 5vh;
+    min-width: 120px;
+  }
+  .profimg img {
+    width: 85%;
+    /* height: 0.3vh; */
+    /* background-color: red; */
+    border-radius: 80px;
+    box-shadow: 0px 5px 10px 10px rgba(227, 137, 12, 0.575);
+  }
+}
+@media only screen and (max-width: 700px) {
+  .portion2 {
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    width: 100%;
+    height: fit-content;
+    gap: 4vh;
+  }
+  .profimg img {
+    width: 60%;
+  }
+  .info111 {
+    width: 100%;
+    display: flex;
+    gap: 1vh;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .logout {
+    height: 82vh;
+  }
+  .profile1 {
+    width: 55vw;
+    /* margin-top: 2vh; */
+    margin-bottom: 2vh;
+    min-width: 88%;
+    height: 56vh;
+    min-height: fit-content;
+  }
+  .profimg img {
+    width: 75%;
+  }
+}

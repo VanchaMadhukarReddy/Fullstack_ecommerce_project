@@ -1,0 +1,394 @@
+.buy {
+  width: 95vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: red; */
+  padding-top: 3vw;
+  box-sizing: border-box;
+}
+.payment1 span {
+  font-size: clamp(5px, 1.2vw, 100px);
+}
+.displayof {
+  display: none;
+}
+.buy span {
+  color: red;
+}
+.buyportion1 {
+  width: 40vw;
+  height: 36vw;
+  min-height: 520px;
+  min-width: 400px;
+  /* background-color: green; */
+  background: linear-gradient(170deg, #ffdab9, #ffffff 60%);
+  box-shadow: 0px 20px 20px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 30px;
+  gap: 1vh;
+}
+.buyportion1 label {
+  font-size: clamp(12px, 1.6vw, 100px);
+}
+.buy h1,
+h2 {
+  margin: 0px;
+  padding: 0px;
+}
+.address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+}
+.addressbox {
+  display: flex;
+  flex-direction: column;
+}
+.addressboxfield {
+  height: 6vh;
+  width: 20vw;
+  border-radius: 10px;
+  min-width: 300px;
+  margin: 0px;
+  padding: 0px;
+}
+.addressbtn {
+  width: 10vw;
+  height: 5vh;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  outline: none;
+  /* background-color: rgba(222, 70, 16, 0.658); */
+  background-color: rgb(255, 96, 5);
+  cursor: pointer;
+  min-width: 130px;
+  min-height: fit-content;
+}
+.buyportion2 {
+  width: 40vw;
+  height: 36vw;
+  min-height: 540px;
+  min-width: 400px;
+  /* background-color: yellow; */
+  background: linear-gradient(170deg, #ffdab9, #ffffff 60%);
+  box-shadow: 0px 20px 20px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-around; */
+  padding-top: 3vh;
+  box-sizing: border-box;
+  gap: 2vw;
+}
+.buyprice {
+  width: 90%;
+  color: orange;
+  height: fit-content;
+  display: flex;
+  justify-content: space-around;
+}
+.buyprice h1 {
+  font-size: clamp(25px, 2.3vw, 100px);
+}
+.buymain2 h2 {
+  font-size: clamp(25px, 1.8vw, 100px);
+}
+.buymain2 label {
+  font-size: clamp(20px, 1.5vw, 100px);
+}
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  /* gap: 1vw; */
+  justify-content: space-around;
+}
+.payment1 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* background-color: red; */
+}
+.radiobtn {
+  transform: scale(1.3);
+}
+.paymentheading {
+  font-size: xx-large;
+  font-size: clamp(25px, 2.3vw, 100px);
+}
+.paymentdetailsaa {
+  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 1.4vw;
+  padding-top: 0;
+  gap: 1vw;
+  /* background-color: wheat; */
+}
+.invisible {
+  display: none;
+}
+.cardnumber {
+  width: 13vw;
+  min-width: 200px;
+  min-height: 30px;
+  height: 3vh;
+  border-radius: 10px;
+}
+.outerexpcvv {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.cardexpcvv {
+  width: 5vw;
+  min-width: 85px;
+  min-height: 30px;
+  height: 3vh;
+  border-radius: 10px;
+}
+.buybtncls {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 5%;
+  display: none;
+}
+.buybtn {
+  width: 5vw;
+  height: 4vh;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  outline: none;
+  /* background-color: rgba(222, 70, 16, 0.658); */
+  background-color: rgb(255, 96, 5);
+  cursor: pointer;
+  /* /* min-width: 130px; */
+  /* min-height: fit-content; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buybtnclss {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 5%;
+
+  min-height: 40px;
+}
+.buybtnn {
+  width: 8vw;
+  min-width: 110px;
+  height: 2.2vw;
+  min-height: 35px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  outline: none;
+  /* background-color: rgba(222, 70, 16, 0.658); */
+  background-color: rgb(255, 96, 5);
+  cursor: pointer;
+  /* /* min-width: 130px; */
+  /* min-height: fit-content; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ------upi payment -------*/
+.upipayment {
+  width: 50%;
+  height: fit-content;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.upipaymentdetail {
+  width: 100%;
+  height: fit-content;
+  /* background-color: red; */
+}
+.upipayment img {
+  width: 55%;
+}
+/* ------cod payment -------*/
+.codpayment {
+  width: 50%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.codpaymentdetail {
+  width: 100%;
+  height: fit-content;
+}
+/*  ------------------850---------------------------*/
+@media only screen and (max-width: 850px) {
+  .buy {
+    flex-direction: column;
+    height: fit-content;
+    padding-top: 13vh;
+    gap: 2vw;
+  }
+  .buyportion1,
+  .buyportion2 {
+    width: 70vw;
+    height: fit-content;
+    min-height: 430px;
+    /* background-color: red; */
+    padding: 2px;
+    box-sizing: border-box;
+  }
+  .buyportion1 label {
+    font-size: clamp(18px, 2.7vw, 100px);
+  }
+  .buy h1 {
+    margin: 0px;
+    padding: 0px;
+    font-size: clamp(21px, 4vw, 100px);
+  }
+  .buymain2 h2 {
+    font-size: clamp(25px, 1.8vw, 100px);
+  }
+  .buyportion2 {
+    /* min-height: fit-content; */
+    height: fit-content;
+  }
+
+  .payment-options {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    min-height: 300px;
+    width: 90%;
+    align-items: center;
+    gap: 1vw;
+    justify-content: space-around;
+  }
+
+  .paymentheading {
+    font-size: clamp(20px, 2.3vw, 100px);
+  }
+  .upipaymentdetail {
+    width: 70%;
+    height: fit-content;
+  }
+  .upipayment img {
+    width: 90%;
+  }
+}
+/* ---------450---------------------------------------------------------------------------- */
+@media only screen and (max-width: 450px) {
+  .buy {
+    flex-direction: column;
+    height: fit-content;
+    padding-top: 13vh;
+    gap: 2vw;
+  }
+  .buyportion1 label {
+    font-size: clamp(18px, 4.5vw, 100px);
+  }
+  .buy h1 {
+    margin: 0px;
+    padding: 0px;
+    font-size: clamp(21px, 5.3vw, 100px);
+  }
+  .buymain2 h2 {
+    font-size: clamp(19px, 1.8vw, 100px);
+  }
+  .buymain2 label {
+    font-size: clamp(20px, 1.5vw, 100px);
+  }
+  .address {
+    gap: 1vw;
+  }
+  .addressboxfield {
+    height: 8vw;
+    width: 55vw;
+    min-width: 100px;
+    min-height: 32px;
+    gap: 1vw;
+
+    /* background-color: red; */
+  }
+  .buyportion1,
+  .buyportion2 {
+    width: 85vw;
+    height: 95vw;
+    min-height: 400px;
+    min-width: 100px;
+    gap: 1vw;
+  }
+  .addressbtn {
+    width: 20vw;
+    height: fit-content;
+    min-width: 120px;
+    /* background-color: green; */
+  }
+  .paymentheading {
+    font-size: clamp(20px, 2.3vw, 100px);
+  }
+  .payment1 {
+    width: 90%;
+  }
+  .codpayment {
+    width: 90%;
+  }
+  .upipayment {
+    width: 90%;
+  }
+  .cardnumber {
+    width: 13vw;
+    min-width: 150px;
+    min-height: 30px;
+    height: 3vh;
+    border-radius: 10px;
+  }
+  .outerexpcvv {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .cardexpcvv {
+    width: 5vw;
+    min-width: 70px;
+    min-height: 30px;
+    height: 3vh;
+    border-radius: 10px;
+  }
+  .upipayment {
+    justify-items: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: flex-start;
+  }
+  .upipaymentdetail {
+    width: 50%;
+    height: fit-content;
+  }
+  .upipayment img {
+    width: 80%;
+  }
+}

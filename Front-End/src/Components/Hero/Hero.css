@@ -1,0 +1,143 @@
+.main {
+  /* margin-top: 10vh; */
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  align-items: center;
+  /* width: 80vw; */
+}
+.hero {
+  display: flex;
+  justify-content: center;
+  /* padding: 2vw 2vw 2vw 2vw; */
+  padding: 1vw;
+  width: 77vw;
+  height: fit-content;
+  background: linear-gradient(180deg, #ffdab9, #ffffff 60%);
+  /* border: 2px solid red; */
+  box-sizing: border-box;
+  min-height: 150px;
+  min-width: fit-content;
+  align-items: center;
+  border-radius: 1vw;
+}
+
+.hero-left {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  min-width: fit-content;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  /* background-color: gold; */
+}
+.hero-hand-icon {
+  display: flex;
+  justify-content: center;
+}
+.hero-hand-icon img {
+  width: 5vw;
+}
+.hero h2 {
+  font-size: 2.3vw;
+  margin: 0px;
+  padding: 0px;
+}
+.hero p {
+  margin: 0px;
+  padding: 0px;
+  font-size: 3.3vw;
+  font-weight: bold;
+}
+.hero-right img {
+  height: 30vw;
+  min-height: 120px;
+  /* background-color: red; */
+  /* display: none; */
+}
+.chintubutton222 p {
+  font-size: 1vw;
+  /* background-color: ghostwhite; */
+}
+.chintubutton222 {
+  background-color: #ff0000;
+  border: none;
+  height: 3vw;
+  width: 13vw;
+  min-width: 150px;
+  border-radius: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  gap: 3px;
+}
+.chintubutton222:active {
+  transform: scale(0.85);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+@media only screen and (max-width: 1000px) {
+  .hero {
+    width: 90vw;
+  }
+  .hero-right img {
+    height: 37vw;
+  }
+  .hero-hand-icon img {
+    width: 6vw;
+  }
+  .hero h2 {
+    font-size: 3.2vw;
+    margin: 0px;
+    padding: 0px;
+  }
+  .hero p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 4.3vw;
+    font-weight: bold;
+  }
+  .chintubutton222 p {
+    font-size: 1.2vw;
+    /* background-color: ghostwhite; */
+  }
+  .chintubutton222 {
+    background-color: #ff0000;
+    border: none;
+    height: 4vw;
+    width: 13vw;
+    min-width: 145px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .chintubutton222 {
+    background-color: #ff0000;
+    border: none;
+    height: 4vw;
+    width: 13vw;
+    min-width: 120px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .hero {
+    width: 98vw;
+    height: 25vh;
+    border-radius: 3vw;
+  }
+  .hero-right img {
+    height: 42vw;
+  }
+  .chintubutton222 {
+    background-color: #ff0000;
+    border: none;
+    height: 5vw;
+    width: 13vw;
+    min-width: 110px;
+  }
+  .chintubutton222 p {
+    font-size: 1.9vw;
+    /* background-color: ghostwhite; */
+  }
+}
